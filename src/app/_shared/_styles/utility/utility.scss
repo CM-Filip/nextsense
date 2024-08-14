@@ -1,0 +1,55 @@
+.color-alt {
+  color: var(--clr-text--alt);
+}
+
+.color-text {
+  color: var(--clr-text);
+}
+
+.resize-none {
+  resize: none;
+}
+
+.w-fit-content {
+  width: fit-content;
+}
+
+.section-bg {
+  background-color: var(--clr-section);
+}
+
+.section-bg--alt {
+  background-color: var(--clr-section--alt);
+}
+
+.btn {
+  button {
+    all: unset;
+    padding: 0.25rem 1rem;
+  }
+}
+
+.max-w {
+  width: min(var(--app-max-width), 100%);
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.min-h-100vh {
+  min-height: 100vh;
+}
+
+.d-flex-center {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+}
+
+.btn-circle {
+  aspect-ratio: 1;
+  @extend .d-flex-center;
+  @extend .rounded-circle;
+  @extend .p-2;
+}

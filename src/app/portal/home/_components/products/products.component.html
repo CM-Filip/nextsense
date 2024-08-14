@@ -1,0 +1,25 @@
+<section class="container mx-3 py-5">
+  <header>
+    <h2 class="text-center fs-1">Products</h2>
+    <p class="text-center">Explore our latest product offerings below. For a wider selection, <a routerLink="/store">visit our store</a> or contact us for further information.</p>
+  </header>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th class="d-none d-md-table-cell" scope="col">Description</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let product of products$ | async">
+        <tr>
+          <td>{{ product.title }}</td>
+          <td class="d-none d-md-table-cell">{{ product.description }}</td>
+          <td class="text-end">{{ product.price | currency : '$' }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</section>

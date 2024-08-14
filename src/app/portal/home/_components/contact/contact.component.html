@@ -1,0 +1,53 @@
+<section class="container mx-3 py-5">
+  <header>
+    <h2 class="text-center fs-1">Contact</h2>
+  </header>
+
+  <div class="row gy-4 gx-5">
+    <form [formGroup]="form" class="p4 col-12 col-md-6 d-flex flex-column gap-4">
+      <p class="m-0">
+        <label class="form-label" for="name">Full Name</label>
+        <input class="form-control rounded-0 fw-normal px-3 py-2" id="name" type="text" formControlName="name" placeholder="Name">
+        <small class="text-danger" aria-live="polite">{{ getError('name') }}</small>
+      </p>
+      <p class="m-0">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control rounded-0 fw-normal px-3 py-2"  id="email" type="text" formControlName="email" placeholder="Email Address">
+        <small class="text-danger" aria-live="polite">{{ getError('email') }}</small>
+      </p>
+      <p class="m-0">
+        <label class="form-label" for="phone">Phone</label>
+        <input class="form-control rounded-0 fw-normal px-3 py-2"  id="phone" type="text" formControlName="phone" placeholder="Phone Number">
+        <small class="text-danger" aria-live="polite">{{ getError('phone') }}</small>
+      </p>
+      <p class="m-0">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-control resize-none rounded-0 fw-normal px-3 py-2" id="message" formControlName="message" rows="4" placeholder="Message..."></textarea>
+        <small class="text-danger" aria-live="polite">{{ getError('message') }}</small>
+      </p>
+    
+      <button [disabled]="form.invalid" (click)="submit()" class="btn btn-primary text-white rounded-0 px-5 m-top-4 ml-auto align-self-end" aria-label="Send">Send</button>
+    </form>
+  
+    <section class="col-12 col-md-6 d-flex flex-column gap-4">
+      <h3>Get in touch</h3>
+      <p>You can reach out to us through our convenient contact form, or feel free to connect with us directly using any of the other methods listed below. Whether it’s by phone, email, or visiting us in person, we’re here to assist you in the way that best suits your needs. We don't use social media because we're too cool for it.</p>
+      <ul class="list-unstyled m-0 p-0">
+        <li class="d-flex align-items-center gap-3 py-2">
+          <i class="bi bi-telephone-fill color-text" aria-hidden="true"></i>
+          <a class="fw-bold color-alt" href="mailto:contact@mycoolshop.com">contact&#64;mycoolshop.com</a>
+        </li>
+    
+        <li class="d-flex align-items-center gap-3 py-2">
+          <i class="bi bi-envelope-fill color-text" aria-hidden="true"></i>
+          <a class="fw-bold color-alt" href="tel:+3893222111">(389) 3222-111</a>
+        </li>
+    
+        <li class="d-flex align-items-center gap-3 py-2">
+          <i class="bi bi-geo-alt-fill color-text" aria-hidden="true"></i>
+          <address class="m-0">Blvd. Partizanska 62<br>1000 Skopje, Macedonia</address>
+        </li>
+      </ul>
+    </section>
+  </div>
+</section>

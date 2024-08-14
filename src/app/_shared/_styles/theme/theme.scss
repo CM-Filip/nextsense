@@ -1,0 +1,77 @@
+// Theme system needs a rework to be fully integrated with the bootstrap theme system
+
+body[data-bs-theme="dark"] {
+  --clr-bg: #20202C;
+  
+  --clr-primary: #6971FA;
+  --clr-accent: #8FAD65;
+  --clr-secondary: #68B0CC;
+
+  --clr-text: #727692;
+  --clr-text--alt: #686ECC;
+  --clr-text-link: #FEFEFE;
+
+  --clr-heading-text: #FEFEFE;
+  --clr-heading-text--alt: #686ECC;
+
+  --clr-section: #20202C;
+  --clr-section--alt: #2A2A36;
+
+  --clr-table: hsla(240, 16%, 15%, 0);
+  --clr-table-stripe: hsla(233, 13%, 51%, 0.1);
+  --clr-table-border: #727692;
+
+  --clr-form-control: #242430;
+  --clr-form-control-text: #FEFEFE;
+  --clr-form-control--alt: #2F2E3C;
+  --clr-form-control-outline: #424570;
+
+  --clr-dropdown: #424570;
+  --clr-dropdown--alt: #5a5f99;
+  --clr-dropdown-text: #FEFEFE;
+  --clr-dropdown-text--alt: #FEFEFE;
+
+  --clr-hero: radial-gradient(
+      circle, 
+      rgb(54, 53, 70) 0%,
+      rgba(36,36,48,1) 100%
+  );
+}
+
+body[data-bs-theme="light"] {
+  --clr-bg: hsl(240, 16%, 85%);
+  
+  --clr-primary: #6971FA;
+  --clr-accent: #8FAD65;
+  --clr-secondary: #68B0CC;
+
+  --clr-text: hsl(233, 13%, 51%);
+  --clr-text--alt: hsl(236, 50%, 40%);
+  --clr-text-link: hsl(0, 0%, 10%);
+
+  --clr-heading-text: hsl(0, 0%, 10%);
+  --clr-heading-text--alt: hsl(236, 50%, 40%);
+
+  --clr-section: hsl(240, 16%, 92%);
+  --clr-section--alt: hsl(240, 13%, 88%);
+
+  --clr-table: hsla(240, 16%, 15%, 0);
+  --clr-table-stripe: hsla(233, 13%, 51%, 0.1);
+  --clr-table-border: hsl(233, 13%, 51%);
+
+  --clr-form-control: hsl(240, 14%, 84%);
+  --clr-form-control-text: hsl(0, 0%, 10%);
+  --clr-form-control--alt: hsl(244, 13%, 79%);
+  --clr-form-control-outline: hsl(236, 26%, 70%);
+
+  --clr-dropdown: hsl(236, 26%, 80%);
+  --clr-dropdown--alt: hsl(235, 26%, 65%);
+  --clr-dropdown-text: hsl(0, 0%, 10%);
+  --clr-dropdown-text--alt: hsl(0, 0%, 10%);
+
+  --clr-hero: radial-gradient(
+      circle, 
+      hsl(244, 14%, 80%) 0%,
+      hsl(240, 14%, 88%) 100%
+  );
+}

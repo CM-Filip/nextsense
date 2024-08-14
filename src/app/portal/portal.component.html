@@ -1,0 +1,33 @@
+<header class="navbar navbar-expand-md px-4 fixed-bottom bg-body" affix>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()" aria-controls="navbarNav" aria-expanded="!isCollapsed" aria-label="Toggle Navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <nav [ngbCollapse]="isCollapsed" class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" fragment="home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" fragment="products">Products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/store">Store</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" fragment="about">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" fragment="contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="section-bg py-4 mb-5">
+  <p class="text-center fw-semibold">Copyright &copy; Nextsense</p>
+</footer>

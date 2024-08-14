@@ -1,0 +1,18 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+
+  --app-max-width: 900px;
+  --app-inline-margin: 2.35rem;
+}
+
+router-outlet {
+  display: none;
+}

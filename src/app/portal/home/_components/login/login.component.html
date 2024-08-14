@@ -1,0 +1,18 @@
+<section class="container">
+  <h2 class="text-center">Login</h2>
+  <form [formGroup]="form" class="p4 col-12 col-sd-6">
+    <p class="mb-3">
+      <label class="form-label" for="username">Username</label>
+      <input class="form-control rounded-0 fw-normal px-3 py-2" formControlName="username" type="text" id="username">
+      <small class="text-danger" aria-live="polite">{{ getError('username') }}</small>
+    </p>
+  
+    <p class="mb-3">
+      <label class="form-label" for="password">Password</label>
+      <input class="form-control rounded-0 fw-normal px-3 py-2" formControlName="password" type="password">
+      <small class="text-danger" aria-live="polite">{{ getError('password') }}</small>
+    </p>
+  
+    <button class="btn btn-primary" (click)="login()">Log In</button>
+  </form>
+</section>

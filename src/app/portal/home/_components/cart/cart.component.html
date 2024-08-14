@@ -1,0 +1,42 @@
+<section class="px-4 py-2">
+  <h2><i class="bi bi-cart4"></i> Cart</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+
+      <ng-container *ngIf="cart$ | async as cart; else loader">
+        <tbody>
+          <ng-container *ngFor="let product of cart.products">
+            <tr>
+              <td>{{ product.title }}</td>
+              <td>{{ product.quantity }}</td>
+              <td>{{ product.price | currency : '$' }}</td>
+              <td class="text-end">{{ product.totalPrice | currency : '$' }}</td>
+            </tr>
+          </ng-container>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="col" colspan="3">Total Price</th>
+            <td class="text-end">{{ totalPrice(cart) | currency : '$'}}</td>
+          </tr>
+        </tfoot>
+      </ng-container>
+
+      <ng-template #loader>
+        <tbody>
+          <td colspan="4" class="text-center py-4">
+            <div class="spinner-border text-primary" role="status">
+              <span class="d-none">Loading data...</span>
+            </div>
+          </td>
+        </tbody>
+      </ng-template>
+    </table>
+</section>

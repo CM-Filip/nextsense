@@ -1,0 +1,5 @@
+<ng-container *ngFor="let toast of toasts$ | async; trackBy: trackBy">
+  <ngb-toast [class]="toast.classname" [autohide]="true" [delay]="toast.duration || 5000" (hidden)="remove(toast)">
+    <p class="text-white">{{ toast.message }}</p>
+  </ngb-toast>
+</ng-container>
